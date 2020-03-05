@@ -1,0 +1,24 @@
+{
+  "thematics": [
+    {
+      "id": 1,
+      "value": "VAGUES"
+    },
+    {
+      "id": 2,
+      "value": "METEO"
+    },
+    {
+      "id": 3,
+      "value": "NIVEAUX"
+    },
+    {
+      "id": 4,
+      "value": "HYDRODYN"
+    },
+    {
+      "id": 5,
+      "value": "RADARHF"
+    }
+  ]
+}

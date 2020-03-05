@@ -1,0 +1,16 @@
+{
+  "systems": [
+    {
+      "id": 2,
+      "value": "MAREGRAPHIE"
+    },
+    {
+      "id": 3,
+      "value": "GAN"
+    },
+    {
+      "id": 4,
+      "value": "NAVAREA"
+    }
+  ]
+}

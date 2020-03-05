@@ -5,11 +5,141 @@
   <app-navbar></app-navbar>
 
   <div id="main-content" style="margin-top: 100px;">
-    <div class="container">
-      <div class="block-header">
-        <div class="row">
-          <div class="col-lg-5 col-md-8 col-sm-12">
-            <h2>Tableau de Bord des Intégrations</h2>
+    <div class="container-fluid">
+      <div class="row clearfix">
+        <div class="col-md-6">
+          <div class="col-lg-12 col-md-12"
+               *ngFor="let systemOceano of systemsOceano?.systemsOceano">
+            <div class="card modal-open m-b-5 shadow p-0">
+              <div class="header">
+                <h2><i class="fa fa-server"></i> {{systemOceano.value}}</h2>
+                <hr>
+              </div>
+              <div class="body">
+                <div class="row clearfix container" *ngIf="systemOceano.value == 'OCEANO'">
+                  <div class="col-md-6" *ngFor="let thematic of thematics?.thematics">
+                    <div class="card modal-open border border-secondary" >
+                      <div class="header">
+                        <h2><i class="fa fa-bookmark-o"></i> {{thematic.value | titlecase}}</h2>
+                      </div>
+                      <div class="body">
+                        <div class="table-responsive">
+                          <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                              <td>Mailchimp</td>
+                              <td><span>502 Records</span></td>
+                              <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                              <th><i class="fa fa-circle text-success"></i></th>
+                            </tr>
+                            <tr>
+                              <td>Google</td>
+                              <td><span>502 Records</span></td>
+                              <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                              <th><i class="fa fa-circle text-danger"></i></th>
+                            </tr>
+                            <tr>
+                              <td>Other</td>
+                              <td><span>237 Records</span></td>
+                              <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                              <th><i class="fa fa-circle text-danger"></i></th>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress progress-xs progress-transparent custom-color-blue mb-0">
+                <div class="progress-bar" data-transitiongoal="100" style="width: 100%;" aria-valuenow="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row clearfix">
+            <div class="col-lg-12 col-md-12" *ngFor="let system of systems?.systems">
+              <div class="card modal-open m-b-5 shadow p-0">
+                <div class="header">
+                  <h2><i class="fa fa-server"></i> {{system.value}}</h2>
+                  <hr>
+                </div>
+                <div class="body">
+                  <div class="row clearfix container" *ngIf="system.value == 'MAREGRAPHIE'">
+                    <div class="col-md-6" *ngFor="let source of sources?.sources">
+                      <div class="card modal-open border border-secondary" >
+                        <div class="header">
+                          <h2><i class="fa fa-bookmark-o"></i> {{source.value | titlecase}}</h2>
+                        </div>
+                        <div class="body">
+                          <div class="table-responsive">
+                            <table class="table table-hover">
+                              <tbody>
+                              <tr>
+                                <td>Mailchimp</td>
+                                <td><span>502 Records</span></td>
+                                <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                                <th><i class="fa fa-circle text-success"></i></th>
+                              </tr>
+                              <tr>
+                                <td>Google</td>
+                                <td><span>502 Records</span></td>
+                                <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                                <th><i class="fa fa-circle text-danger"></i></th>
+                              </tr>
+                              <tr>
+                                <td>Other</td>
+                                <td><span>237 Records</span></td>
+                                <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                                <th><i class="fa fa-circle text-danger"></i></th>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row clearfix container" *ngIf="system.value == 'GAN' || system.value == 'NAVAREA'">
+                    <div class="col-md-12">
+                      <div class="card modal-open border border-secondary" >
+                        <div class="body">
+                          <div class="table-responsive">
+                            <table class="table table-hover">
+                              <tbody>
+                              <tr>
+                                <td>Mailchimp</td>
+                                <td><span>502 Records</span></td>
+                                <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                                <th><i class="fa fa-circle text-success"></i></th>
+                              </tr>
+                              <tr>
+                                <td>Google</td>
+                                <td><span>502 Records</span></td>
+                                <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                                <th><i class="fa fa-circle text-danger"></i></th>
+                              </tr>
+                              <tr>
+                                <td>Other</td>
+                                <td><span>237 Records</span></td>
+                                <td><a href="" title="Lien"><i class="fa fa-link"></i></a></td>
+                                <th><i class="fa fa-circle text-danger"></i></th>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress progress-xs progress-transparent custom-color-blue mb-0">
+                  <div class="progress-bar" data-transitiongoal="100" style="width: 100%;" aria-valuenow="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
