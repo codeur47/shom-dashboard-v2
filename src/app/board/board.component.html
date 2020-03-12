@@ -1,0 +1,26 @@
+<div class="card modal-open border border-secondary animated zoomIn">
+    <div class="header">
+      <i class="fa fa-circle text-success" style="right: 42px; position: absolute" *ngIf="boardItem.statusBuild!==''"></i>
+      <h2><i class="fa fa-bookmark-o"></i> {{boardItem.source}}</h2>
+    </div>
+    <div class="body">
+      <div *ngIf="boardItem.statusBuild===''">
+        <div class="animated infinite slower flash" style="color: red; font-style: oblique;">SERVICE INDISPONIBLE</div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <tbody>
+            <tr *ngFor="let build of boardItem.data;">
+              <td> Build {{build.id}}</td>
+              <td><span>{{build.timestamp | date: 'dd/MM/yyyy HH:mm:ss'}}</span></td>
+              <td><a href="{{build.url}}" target="_blank" title="Lien"><i class="fa fa-link"></i></a></td>
+              <th>
+                <i class="fa fa-circle text-success" *ngIf="build.result==='SUCCESS'"></i>
+                <i class="fa fa-circle text-danger" *ngIf="build.result==='FAILURE'"></i>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

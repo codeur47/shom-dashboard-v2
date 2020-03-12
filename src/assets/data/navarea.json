@@ -1,0 +1,34 @@
+{
+    "builds": [
+        {
+            "id": "5",
+            "result": "SUCCESS",
+            "timestamp": 1574264807621,
+            "url": "https://qlf-entrepot-shom-fr.shom2.as8677.net/orchestrateur/job/NAVAREA_INTEGRATION/5/"
+        },
+        {
+            "id": "4",
+            "result": "SUCCESS",
+            "timestamp": 1546434813660,
+            "url": "https://qlf-entrepot-shom-fr.shom2.as8677.net/orchestrateur/job/NAVAREA_INTEGRATION/4/"
+        },
+        {
+            "id": "3",
+            "result": "SUCCESS",
+            "timestamp": 1546434677293,
+            "url": "https://qlf-entrepot-shom-fr.shom2.as8677.net/orchestrateur/job/NAVAREA_INTEGRATION/3/"
+        },
+        {
+            "id": "2",
+            "result": "SUCCESS",
+            "timestamp": 1546434604409,
+            "url": "https://qlf-entrepot-shom-fr.shom2.as8677.net/orchestrateur/job/NAVAREA_INTEGRATION/2/"
+        },
+        {
+            "id": "1",
+            "result": "FAILURE",
+            "timestamp": 1540592100152,
+            "url": "https://qlf-entrepot-shom-fr.shom2.as8677.net/orchestrateur/job/NAVAREA_INTEGRATION/1/"
+        }
+    ]
+}
